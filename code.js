@@ -43,6 +43,16 @@ function hideViz(){
 
 
 
+function boxAndWhisker(){
+    var workbook = viz.getWorkbook();
+    workbook.activateSheetAsync("South");
+    console.log('South Map Activated');
+    var chart = document.getElementById("southMap");
+    var chartID = document.getElementById("chartType");
+    chartID.innerHTML = 'You have Chosen to see ' + chart.value;
+};
+
+
 
 
 
