@@ -37,7 +37,7 @@ function barChart(){
 document.getElementById("bubbleChart").addEventListener('click', hideViz);
 
 function hideViz(){
-    var vizDiv = getElementById("vizContainer")
+    var vizDiv = document.getElementById("vizContainer")
     vizDiv.style.display = 'none'
 };
 
