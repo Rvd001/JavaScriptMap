@@ -58,7 +58,7 @@ function originalSize() {
 function barChart(){
 
     // var workbook = viz.getWorkbook();
-    workbook.activateSheetAsync("Bar");
+    workbook.activateSheetAsync("West");
     console.log('Bar Chart Activated');
     var chart = document.getElementById("barChart");
     var chartID = document.getElementById("chartType");
