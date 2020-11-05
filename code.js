@@ -23,40 +23,6 @@ function initViz() {
     viz = new tableau.Viz(containerDiv, url, options);
 }
 
-function vizResize() {
-    var width = document.getElementById("resizeWidth").value;
-    var height = document.getElementById("resizeHeight").value;
-
-    // gets the width and height value
-
-    viz.setFrameSize(parseInt(width, 10), parseInt(height, 10));
-}
-
-
-//Original Size
-
-function originalSize() {
-    // viz.setFrameSize(parseInt(1300, 10), parseInt(700, 10));
-    var workbook = viz.getWorkbook();
-    workbook.revertAllAsync();
-}
-
-
-
-//End of Test
-
-
-
-function hideViz(){
-    var vizDiv = getElementById("vizContainer")
-    vizDiv.style.display = 'none'
-}
-
-
-
-
-
-//Switching Sheets
 
 function barChart(){
 
@@ -68,15 +34,77 @@ function barChart(){
     chartID.innerHTML = 'You have Chosen to see ' + chart.value;
 };
 
+document.getElementById("bubbleChart").addEventListener('click', hideViz);
 
-function BubbleChart(){
-    var workbook = viz.getWorkbook();
-    workbook.activateSheetAsync("Bubble Chart");
-    console.log('Bubble Chart Activated');
-    var chart = document.getElementById("bubbleChart");
-    var chartID = document.getElementById("chartType");
-    chartID.innerHTML = 'You have Chosen to see ' + chart.value;
+function hideViz(){
+    var vizDiv = getElementById("vizContainer")
+    vizDiv.style.display = 'none'
 };
+
+
+
+
+
+
+
+// function vizResize() {
+//     var width = document.getElementById("resizeWidth").value;
+//     var height = document.getElementById("resizeHeight").value;
+
+//     // gets the width and height value
+
+//     viz.setFrameSize(parseInt(width, 10), parseInt(height, 10));
+// }
+
+
+
+
+
+
+
+
+
+
+//Original Size
+
+// function originalSize() {
+//     // viz.setFrameSize(parseInt(1300, 10), parseInt(700, 10));
+//     var workbook = viz.getWorkbook();
+//     workbook.revertAllAsync();
+// }
+
+
+
+//End of Test
+
+
+
+
+
+
+
+
+//Switching Sheets
+
+// function barChart(){
+
+//     // var workbook = viz.getWorkbook();
+//     workbook.activateSheetAsync("West");
+//     console.log('Bar Chart Activated');
+//     var chart = document.getElementById("barChart");
+//     var chartID = document.getElementById("chartType");
+//     chartID.innerHTML = 'You have Chosen to see ' + chart.value;
+// };
+
+
+// function BubbleChart(){
+//     var workbook = viz.getWorkbook();
+//     workbook.activateSheetAsync("Bubble Chart");
+//     console.log('Bubble Chart Activated');
+//     var chart = document.getElementById("bubbleChart");
+//     var chartID = document.getElementById("chartType");
+//     chartID.innerHTML = 'You have Chosen to see ' + chart.value;
+// };
 
 //This is because the Bubble chart and BW Chart do not have region filter
 
@@ -102,74 +130,74 @@ function BubbleChart(){
 
 
 
-function boxAndWhisker(){
-    var workbook = viz.getWorkbook();
-    workbook.activateSheetAsync("BW");
-    console.log('Box and Whisker Chart Activated');
-    var chart = document.getElementById("boxAndWhisker");
-    var chartID = document.getElementById("chartType");
-    chartID.innerHTML = 'You have Chosen to see ' + chart.value;
-};
+// function boxAndWhisker(){
+//     var workbook = viz.getWorkbook();
+//     workbook.activateSheetAsync("BW");
+//     console.log('Box and Whisker Chart Activated');
+//     var chart = document.getElementById("boxAndWhisker");
+//     var chartID = document.getElementById("chartType");
+//     chartID.innerHTML = 'You have Chosen to see ' + chart.value;
+// };
 
 
-//Filters
-//wEST Filter
-//Promise should be used here
+// //Filters
+// //wEST Filter
+// //Promise should be used here
 
-function westFilter(){
-    // workbook.activateSheetAsync("Bar Chart");
-    activeSheet.applyFilterAsync(
-        "Region",
-        "West",
-        tableau.FilterUpdateType.REPLACE
-    );
-};
-
-
-
-//EAST Filter
-
-function eastFilter(){
-
-    activeSheet.applyFilterAsync(
-        "Region",
-        "East",
-        tableau.FilterUpdateType.REPLACE
-    )
-};
+// function westFilter(){
+//     // workbook.activateSheetAsync("Bar Chart");
+//     activeSheet.applyFilterAsync(
+//         "Region",
+//         "West",
+//         tableau.FilterUpdateType.REPLACE
+//     );
+// };
 
 
 
+// //EAST Filter
 
-//SOUTH Filter
+// function eastFilter(){
 
-function southFilter(){
+//     activeSheet.applyFilterAsync(
+//         "Region",
+//         "East",
+//         tableau.FilterUpdateType.REPLACE
+//     )
+// };
+
+
+
+
+// //SOUTH Filter
+
+// function southFilter(){
    
-    activeSheet.applyFilterAsync(
-        'Region',
-        'South',
-        tableau.FilterUpdateType.ADD
-    )
-};
+//     activeSheet.applyFilterAsync(
+//         'Region',
+//         'South',
+//         tableau.FilterUpdateType.ADD
+//     )
+// };
 
 
 
-//radio button Activation
+// //radio button Activation
 
-function radioButton()
-{
-    const rbs = document.querySelectorAll('input[name = "region"]');
-    //double quote is needed in a single quote to ensure specitifity
-    let selectedValue;
-    for(const radiobutton of radiobuttons){
-        if (radiobutton.checked){
-            selectedValue = radiobutton.value;
-            break;
-        }
-    }
+// function radioButton()
+// {
+//     const rbs = document.querySelectorAll('input[name = "region"]');
+//     //double quote is needed in a single quote to ensure specitifity
+//     let selectedValue;
+//     for(const radiobutton of radiobuttons){
+//         if (radiobutton.checked){
+//             selectedValue = radiobutton.value;
+//             break;
+//         }
+//     }
 
 
-};
+// };
 
 
 
