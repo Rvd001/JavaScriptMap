@@ -53,7 +53,15 @@ function boxAndWhisker(){
 };
 
 
+function centralMap(){
 
+    // var workbook = viz.getWorkbook();
+    workbook.activateSheetAsync("Central");
+    console.log('Bar Chart Activated');
+    var chart = document.getElementById("Central");
+    var chartID = document.getElementById("chartType");
+    chartID.innerHTML = 'You have Chosen to see ' + chart.value;
+};
 
 
 
