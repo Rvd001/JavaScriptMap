@@ -47,7 +47,10 @@ function originalSize() {
 
 
 
-
+function hideViz(){
+    var vizDiv = getElementById("vizContainer")
+    vizDiv.style.display = 'none'
+}
 
 
 
