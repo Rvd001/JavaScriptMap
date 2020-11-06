@@ -42,6 +42,18 @@ function hideViz(){
 };
 
 
+function regionalChart(region){
+
+   var workbook = viz.getWorkbook();
+    workbook.activateSheetAsync(region, regionID);
+    console.log('Bar Chart Activated');
+    var chart = document.getElementById(regionID);
+    var chartID = document.getElementById("chartType");
+    chartID.innerHTML = 'You have Chosen to see ' + chart.value;
+};
+
+
+
 
 function SouthMap(){
     var workbook = viz.getWorkbook();
