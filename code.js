@@ -42,6 +42,12 @@ function hideViz(){
 };
 
 
+//Region Button Click
+document.getElementById("Western").addEventListener('click', regionalChart);
+document.getElementById("Eastern").addEventListener('click', regionalChart);
+document.getElementById("Central").addEventListener('click', regionalChart);
+document.getElementById("Southern").addEventListener('click', regionalChart);
+
 function regionalChart(region, regionID){
 
    var workbook = viz.getWorkbook();
