@@ -37,8 +37,10 @@ function barChart(){
 document.getElementById("bubbleChart").addEventListener('click', hideViz);
 
 function hideViz(){
-    var vizDiv = document.getElementById("vizContainer")
-    vizDiv.style.display = 'none'
+    var vizDiv = document.getElementById("vizContainer");
+    vizDiv.style.display = 'none';
+    var chartID = document.getElementById("chartType");
+    chartID.style.display = 'none';
 };
 
 
@@ -49,16 +51,18 @@ document.getElementById("Central").addEventListener('click', regionalChart);
 document.getElementById("Southern").addEventListener('click', regionalChart);
 
 function regionalChart(region, regionID){
-
+   var vizDiv = document.getElementById("vizContainer");
+   vizDiv.style.display = 'block';
    var workbook = viz.getWorkbook();
     workbook.activateSheetAsync(region);
     console.log(region + " " + "is  Activated");
     var chart = document.getElementById(regionID);
     var chartID = document.getElementById("chartType");
     chartID.innerHTML = 'You have Chosen to see ' + chart.value;
-    var vizDiv = document.getElementById("vizContainer")
-    vizDiv.style.display = 'block'
+
 };
+
+
 
 
 
