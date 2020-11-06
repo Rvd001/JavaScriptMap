@@ -67,27 +67,28 @@ function regionalChart(region, regionID){
 
 
 
-function SouthMap(){
-    var workbook = viz.getWorkbook();
-    workbook.activateSheetAsync("South");
-    console.log('South Map Activated');
-    var chart = document.getElementById("southMap");
-    var chartID = document.getElementById("chartType");
-    chartID.innerHTML = 'You have Chosen to see ' + chart.value;
-};
+// function SouthMap(){
+//     var workbook = viz.getWorkbook();
+//     workbook.activateSheetAsync("South");
+//     console.log('South Map Activated');
+//     var chart = document.getElementById("southMap");
+//     var chartID = document.getElementById("chartType");
+//     chartID.innerHTML = 'You have Chosen to see ' + chart.value;
+// };
 
 
-function centralMap(){
+// function centralMap(){
 
-    var workbook = viz.getWorkbook();
-    workbook.activateSheetAsync("Central");
-    console.log('Central Chart Activated');
-    var chart = document.getElementById("Central");
-    var chartID = document.getElementById("chartType");
-    chartID.innerHTML = 'You have Chosen to see ' + chart.value;
-};
+//     var workbook = viz.getWorkbook();
+//     workbook.activateSheetAsync("Central");
+//     console.log('Central Chart Activated');
+//     var chart = document.getElementById("Central");
+//     var chartID = document.getElementById("chartType");
+//     chartID.innerHTML = 'You have Chosen to see ' + chart.value;
+// };
 
 
+// Worksheet Resizing
 
 // function vizResize() {
 //     var width = document.getElementById("resizeWidth").value;
@@ -98,6 +99,18 @@ function centralMap(){
 //     viz.setFrameSize(parseInt(width, 10), parseInt(height, 10));
 // }
 
+
+// Dashboard Resizing
+
+// function vizResize() {
+//     var width = document.getElementById("resizeWidth").value;
+//     var height = document.getElementById("resizeHeight").value;
+//     var sheet = viz.getWorkbook().getActiveSheet();
+
+//     sheet.changeSizeAsync(
+//         {"behavior": "EXACTLY", "maxSize": { "height": height, "width": width }})
+//         .then(viz.setFrameSize(parseInt(width, 10), parseInt(height, 10)));
+// }
 
 
 
