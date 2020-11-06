@@ -56,6 +56,8 @@ function regionalChart(region, regionID){
     var chart = document.getElementById(regionID);
     var chartID = document.getElementById("chartType");
     chartID.innerHTML = 'You have Chosen to see ' + chart.value;
+    var vizDiv = document.getElementById("vizContainer")
+    vizDiv.style.display = 'block'
 };
 
 
