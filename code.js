@@ -42,11 +42,11 @@ function hideViz(){
 };
 
 
-function regionalChart(region){
+function regionalChart(region, regionID){
 
    var workbook = viz.getWorkbook();
-    workbook.activateSheetAsync(region, regionID);
-    console.log('Bar Chart Activated');
+    workbook.activateSheetAsync(region);
+    console.log(region + " " + "is  Activated");
     var chart = document.getElementById(regionID);
     var chartID = document.getElementById("chartType");
     chartID.innerHTML = 'You have Chosen to see ' + chart.value;
