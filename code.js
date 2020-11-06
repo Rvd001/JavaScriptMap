@@ -43,7 +43,7 @@ function hideViz(){
 
 
 
-function boxAndWhisker(){
+function SouthMap(){
     var workbook = viz.getWorkbook();
     workbook.activateSheetAsync("South");
     console.log('South Map Activated');
@@ -55,9 +55,9 @@ function boxAndWhisker(){
 
 function centralMap(){
 
-    // var workbook = viz.getWorkbook();
+    var workbook = viz.getWorkbook();
     workbook.activateSheetAsync("Central");
-    console.log('Bar Chart Activated');
+    console.log('Central Chart Activated');
     var chart = document.getElementById("Central");
     var chartID = document.getElementById("chartType");
     chartID.innerHTML = 'You have Chosen to see ' + chart.value;
